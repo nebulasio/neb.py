@@ -16,7 +16,7 @@ please refer to [examples](/nebpysdk/example) to learn how to use neb.py.
 
 #### Account
 
-```
+```python
 from nebpysdk.src.account.Account import Account
 # generate a new account
 account = Account.new_account()
@@ -35,7 +35,7 @@ print(account.get_public_key())
 
 #### API
 
-```
+```python
 from nebpysdk.src.client.Neb import Neb
 import json
 neb = Neb()
@@ -49,7 +49,7 @@ print(neb.api.latestIrreversibleBlock().text)
 
 #### Transaction
 
-```
+```python
 from nebpysdk.src.account.Account import Account
 from nebpysdk.src.core.Address import Address
 from nebpysdk.src.core.Transaction import Transaction
