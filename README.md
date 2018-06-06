@@ -5,14 +5,14 @@ Users can sign/send transactions and deploy/call smart contract with it.
 
 ## Installation
 
-You can install this library via Composer:
+You can install this library via pip:
 ```sh
 pip install NebulasSdkPy
 ```
 
 ## Usage
 
-please refer to [examples](/example) to learn how to use neb.py.
+please refer to [examples](/nebpysdk/example) to learn how to use neb.py.
 
 #### Account
 
@@ -111,5 +111,5 @@ print(neb.api.sendRawTransaction(tx.to_proto()).text)
 
 We are happy to receive bug reports, fixes, documentation enhancements, and other improvements.
 
-Please report bugs via the [github issue](/issues).
+Please report bugs via the github issue
 
