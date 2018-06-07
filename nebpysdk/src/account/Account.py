@@ -72,8 +72,11 @@ class Account:
     def from_key(cls, key_data: str, password: bytes):
 
         # check password
+        if type(password) is str:
+            password = bytes(password.encode())
+
         if type(password) is not bytes:
-            raise Exception("password must be bytes")
+            raise Exception("password must be bytes or str")
 
         # json to dict
         key_data_json = cls.__is_valid_json(key_data)

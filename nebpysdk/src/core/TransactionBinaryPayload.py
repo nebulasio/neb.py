@@ -17,10 +17,10 @@ class TransactionBinaryPayload(TransactionPayload):
         if type(data) is str:
             data = bytes(data.encode())
 
-        self.__data = bytes(data)
+        self.data = bytes(data)
 
     def to_bytes(self):
-        return self.__data
+        return self.data
 
     def gas_count(self):
         return 0

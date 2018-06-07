@@ -10,7 +10,7 @@ import re
 
 class TransactionCallPayload(TransactionPayload):
 
-    @classmethod
+   @classmethod
     def dict2_transaction_call_payload(cls, data):
         return TransactionCallPayload(data['_function'],data['args'])
 
@@ -20,8 +20,8 @@ class TransactionCallPayload(TransactionPayload):
         return TransactionCallPayload(payload.get_function(), payload.get_args())
 
     def __init__(self, _function, args):
-        self.__function = _function
-        self.__args = args
+        self.Function = _function
+        self.Args = args
 
     def check_args(self, _function, args):
         if re.match(r'^[a-zA-Z$][A-Za-z0-9_$]*$', _function):
@@ -31,19 +31,20 @@ class TransactionCallPayload(TransactionPayload):
             str_json = json.loads(args)
 
     def get_function(self):
-        return self.__function
+        return self.Function
 
     def set_function(self,_function):
-        self.__function = _function
+        self.Function = _function
 
     def get_args(self):
-        return self.__args
+        return self.Args
 
     def set_args(self, args):
-        self.__args = args
+        self.Args = args
 
     def to_bytes(self):
         return bytes(json.dumps(self.__dict__).encode())
 
     def gas_count(self):
         return 60
+

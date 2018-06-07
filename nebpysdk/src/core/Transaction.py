@@ -52,6 +52,23 @@ class Transaction:
 
     def __init__(self, chain_id, from_account, to_addr, value, nonce, payload_type, payload, gas_price, gas_limit):
 
+        if type(chain_id) is not int:
+            raise Exception("chain_id type must be int")
+        if type(from_account) is not Account:
+            raise Exception("from_account type must be Account")
+        if type(to_addr) is not Address:
+            raise Exception("to_addr type must be Address")
+        if type(value) is not int:
+            raise Exception("value type must by int")
+        if type(nonce) is not int:
+            raise Exception("nonce type must be int")
+        if type(payload) is not bytes:
+            raise Exception("payload type must be bytes")
+        if type(gas_price) is not int:
+            raise Exception("gas_price type must be int")
+        if type(gas_limit) is not int:
+            raise Exception("gas_limit type must be int")
+
         if gas_price > self.__TransactionMaxGasPrice or gas_price > self.__TransactionMaxGas:
             raise Exception("invalid gasPrice")
 
