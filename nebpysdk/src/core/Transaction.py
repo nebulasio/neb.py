@@ -7,6 +7,7 @@ import enum
 import time
 from nebpysdk.src.proto.generated.corepb import transaction_pb2
 from nebpysdk.src.core.Address import Address
+from nebpysdk.src.account.Account import Account
 from nebpysdk.src.crypto.hash.Hash import Hash
 from nebpysdk.src.crypto.keystore.secp256k1.ECsignature import ECsignature
 from nebpysdk.src.crypto.keystore.Algorithm import Algorithm

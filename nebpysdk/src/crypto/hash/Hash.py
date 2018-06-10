@@ -4,7 +4,7 @@
 # @File    : Hash.py
 # @Software: PyCharm
 import hashlib
-from Crypto.Hash import SHA3_256 as SHA3
+# from Crypto.Hash import SHA3_256 as SHA3
 
 class Hash:
 
