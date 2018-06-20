@@ -6,10 +6,10 @@
 from nebpysdk.src.crypto.cipher.CryptoJSON import CryptoJSON
 import pyscrypt
 #import Crypto.Cipher.AES
-from crypto.Cipher import AES
+from Crypto.Cipher import AES
 from nebpysdk.src.crypto.hash.Hash import Hash
 import base64
-from crypto.Util import Counter
+from Crypto.Util import Counter
 import binascii
 import os
 
