@@ -5,7 +5,7 @@
 # @Software: PyCharm
 from nebpysdk.src.client.Neb import Neb
 import json
-neb = Neb()
+neb = Neb("https://testnet.nebulas.io")
 
 # getNebState
 print(neb.api.getNebState().text)
@@ -62,3 +62,12 @@ print(neb.api.estimateGas("n1JmhE82GNjdZPNZr6dgUuSfzy2WRwmD9zy",
                    "23",
                    "200000",
                    "200000").text)
+
+
+# subscribe (define an event_subscriber to handle the subscribed events)
+def event_subscriber(event):
+    print(event)
+
+neb.set_request("http://172.16.1.6:8685")  #use local nodes to test subscribe api
+topics = ["chain.linkBlock", "chain.pendingTransaction","chain.newTailBlock"]
+neb.api.subscribe(topics,event_subscriber)

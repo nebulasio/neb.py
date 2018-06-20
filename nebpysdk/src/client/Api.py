@@ -4,7 +4,8 @@
 # @File    : Api.py
 # @Software: PyCharm
 from nebpysdk.src.client.HttpRequest import HttpRequest
-
+import requests
+import json
 
 class Api:
 
@@ -76,8 +77,19 @@ class Api:
         }
         return self.send_request("post", "/getTransactionByContract", param)
 
-    def subscribe(self):
-        pass
+    #on_download_progress is the callback function for the subscribed events
+    def subscribe(self, topics, on_download_progress):
+        param = {
+            "topics": topics
+        }
+        header = {'Content-type': 'application/json'}
+        url = self._host + '/' + self._api_version + self._path + '/subscribe'
+        data = json.dumps(param)
+        response = requests.post(url, stream=True, data=data, headers=header)
+        for chunk in response.iter_content(chunk_size=512):
+            if chunk:  # filter out keep-alive new chunks
+                on_download_progress(chunk.decode("utf8"))  #'byte' object to 'str' object
+        return
 
     def gasPrice(self):
         param = {}
