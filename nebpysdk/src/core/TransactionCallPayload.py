@@ -10,7 +10,7 @@ import re
 
 class TransactionCallPayload(TransactionPayload):
 
-   @classmethod
+    @classmethod
     def dict2_transaction_call_payload(cls, data):
         return TransactionCallPayload(data['_function'],data['args'])
 
