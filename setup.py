@@ -18,7 +18,7 @@ setup(
     install_requires=[
         "certifi == 2018.4.16",
         "chardet == 3.0.4",
-        "Crypto == 1.4.1",
+        "crypto == 1.4.1",
         "cytoolz == 0.9.0.1",
         "eth-hash == 0.1.3",
         "eth-keyfile == 0.5.1",
