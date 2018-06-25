@@ -33,7 +33,7 @@ setup(
         "pysha3 == 1.0.2",
         "PyYAML == 3.12",
         "requests == 2.18.4",
-        "sha3 == 0.2.1",
+#        "sha3 == 0.2.1",
         "shellescape == 3.4.1",
         "six == 1.11.0",
         "toolz == 0.9.0",

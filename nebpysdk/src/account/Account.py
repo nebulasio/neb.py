@@ -35,8 +35,10 @@ class Account:
     def to_key(self, password):
 
         # check password
-        if type(password) is not bytes:
-            raise Exception("password must be bytes")
+        if type(password) is str:
+            password = "passphrase".encode('UTF-8')
+        elif type(password) is not bytes:
+            raise Exception("password must be string or bytes")
 
         # encrypt
         cipher = Cipher(Algorithm.SCRYPT)

@@ -10,11 +10,11 @@ from nebpysdk.src.account.Account import Account
 account = Account.new_account()
 
 # export account
-account_json = account.to_key(bytes("passphrase".encode()))
+account_json = account.to_key("passphrase")
 print(account_json)
 
 # load account
-account = Account.from_key(account_json, bytes("passphrase".encode()))
+account = Account.from_key(account_json, "passphrase".encode())
 print(account.get_address_str())
 print(account.get_private_key())
 print(account.get_public_key())
