@@ -7,7 +7,7 @@ Users can sign/send transactions and deploy/call smart contract with it.
 
 You can install this library via pip:
 ```sh
-pip install NebulasSdkPy
+pip install neb-py
 ```
 
 ## Usage

@@ -6,15 +6,20 @@
 
 from setuptools import setup, find_packages
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
-    name='NebulasSdkPy',
-    version='0.3.0',
+    name='neb-py',
+    version='0.4.0',
     author='GuoXiaoMin',
     packages=find_packages(exclude=["test", "test.*"]),
-    url='',
     license='LICENSE.txt',
-    description='NebulasSdkPy',
+    description='Nebulas api sdk in python',
     #long_description=open('README.md').read(),
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/nebulasio/neb.py",
     install_requires=[
         "certifi == 2018.4.16",
         "chardet == 3.0.4",
