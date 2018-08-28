@@ -11,7 +11,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='neb-py',
-    version='0.4.0',
+    version='0.4.2',
     author='GuoXiaoMin',
     packages=find_packages(exclude=["test", "test.*"]),
     license='LICENSE.txt',
@@ -32,7 +32,7 @@ setup(
         "idna == 2.6",
         "Naked == 0.1.31",
         "protobuf == 3.5.2.post1",
-        "pycryptodome == 3.6.1",
+        "pycryptodome == 3.6.6",
         "pycurl == 7.43.0.1",
         "pyscrypt == 1.6.2",
         "pysha3 == 1.0.2",

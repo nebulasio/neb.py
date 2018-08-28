@@ -31,7 +31,7 @@ class Api:
         }
         return self.send_request("post", "/accountstate", param)
 
-    def call(self, from_addr: str, to_addr: str, value: int, nonce: int, gasprice: int, gaslimit: int, contract=None):
+    def call(self, from_addr: str, to_addr: str, value: str, nonce: int, gasprice: str, gaslimit: str, contract=None):
         data = {
             "from": from_addr,
             "to": to_addr,
