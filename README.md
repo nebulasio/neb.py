@@ -19,7 +19,10 @@ please refer to [examples](/nebpysdk/example) to learn how to use neb.py.
 ```python
 from nebpysdk.src.account.Account import Account
 # generate a new account
-account = Account.new_account()
+account = Account()
+account2 = Account.new_account() #another way to create account
+priv_key = "6c41a31b4e689e1441c930ce4c34b74cc037bd5e68bbd6878adb2facf62aa7f3"
+account3 = Account(priv_key) #create account with given priv_key
 
 # export account
 account_json = account.to_key(bytes("passphrase".encode()))

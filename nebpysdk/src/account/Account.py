@@ -18,6 +18,10 @@ class Account:
     def __init__(self, private_key=None):
         if private_key is None:
             private_key = ECPrivateKey.generate_key()
+        elif isinstance(private_key,str):
+            private_key = ECPrivateKey(bytes.fromhex(private_key))
+        elif isinstance(private_key,bytes):
+            private_key = ECPrivateKey(private_key)
         self.__private_key = private_key
         self.__publickey = self.__private_key.public_key()
         self.__address = Address.new_address_from_pub_key(self.__publickey.encode())
@@ -28,8 +32,8 @@ class Account:
         return Account(priv)
 
     @classmethod
-    def new_account(cls):
-        private_key = ECPrivateKey.generate_key()
+    def new_account(cls, private_key=None):
+        # private_key = ECPrivateKey.generate_key()
         return Account(private_key)
 
     def to_key(self, password):

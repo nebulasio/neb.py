@@ -11,7 +11,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='neb-py',
-    version='0.4.2',
+    version='0.4.3',
     author='GuoXiaoMin',
     packages=find_packages(exclude=["test", "test.*"]),
     license='LICENSE.txt',
