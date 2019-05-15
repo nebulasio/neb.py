@@ -19,16 +19,18 @@ class TransactionDeployPayload(TransactionPayload):
         self.SourceType = sourceType
         self.Source = source
         self.Args = args
+        self.data = {"SourceType": sourceType,
+                     "Source":source,
+                     "Args":args}
 
     def checkArgs(self ,sourceType, source, args):
-        if  source == None or source.length() == 0:
+        if  source == None or len(source) == 0:
             raise  Exception("invalid source of deploy payload")
 
         if self.SourceTypeJavaScript != sourceType and  self.SourceTypeTypeScript != sourceType:
             raise Exception("invalid source type of deploy payload")
 
-
-        if args != None and args.length() > 0:
+        if args != None and len(args) > 0:
             str_json = json.loads(args)
 
     def getSourceType(self):
@@ -50,7 +52,7 @@ class TransactionDeployPayload(TransactionPayload):
         self.Args = Args
 
     def to_bytes(self):
-        return json.dumps(self)
+        return bytes(json.dumps(self.data).encode())
 
     def gas_count(self):
         return 60
