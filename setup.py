@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2018/6/4 下午5:18
-# @Author  : GuoXiaoMin
-# @File    : setup.py
-# @Software: PyCharm
-
 from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
@@ -11,12 +5,11 @@ with open("README.md", "r") as fh:
 
 setup(
     name='neb-py',
-    version='0.4.3',
-    author='GuoXiaoMin',
+    version='0.4.4',
+    author='Zhuoer Wang',
     packages=find_packages(exclude=["test", "test.*"]),
     license='LICENSE.txt',
-    description='Nebulas api sdk in python',
-    #long_description=open('README.md').read(),
+    description='Nebulas Python SDK',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/nebulasio/neb.py",
@@ -38,7 +31,6 @@ setup(
         "pysha3 == 1.0.2",
         "PyYAML == 3.12",
         "requests == 2.18.4",
-#        "sha3 == 0.2.1",
         "shellescape == 3.4.1",
         "six == 1.11.0",
         "toolz == 0.9.0",
