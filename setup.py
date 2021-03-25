@@ -29,7 +29,7 @@ setup(
         "pycurl == 7.43.0.1",
         "pyscrypt == 1.6.2",
         "pysha3 == 1.0.2",
-        "PyYAML == 3.12",
+        "PyYAML == 5.4",
         "requests == 2.18.4",
         "shellescape == 3.4.1",
         "six == 1.11.0",

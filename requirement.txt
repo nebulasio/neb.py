@@ -20,7 +20,7 @@ pyasn1==0.4.5
 pyasn1-modules==0.2.4
 pycryptodome==3.7.3
 pyscrypt==1.6.2
-PyYAML==3.13
+PyYAML==5.4
 requests==2.21.0
 rsa==4.0
 shellescape==3.4.1
