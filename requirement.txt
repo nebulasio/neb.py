@@ -22,7 +22,7 @@ pycryptodome==3.7.3
 pyscrypt==1.6.2
 PyYAML==3.13
 requests==2.21.0
-rsa==4.0
+rsa==4.7
 shellescape==3.4.1
 six==1.12.0
 soupsieve==1.8
