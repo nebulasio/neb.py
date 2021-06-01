@@ -34,6 +34,6 @@ setup(
         "shellescape == 3.4.1",
         "six == 1.11.0",
         "toolz == 0.9.0",
-        "urllib3 == 1.22"
+        "urllib3 == 1.26.5"
     ],
 )
