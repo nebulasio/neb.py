@@ -24,7 +24,7 @@ setup(
         "eth-utils == 1.0.3",
         "idna == 2.6",
         "Naked == 0.1.31",
-        "protobuf == 3.5.2.post1",
+        "protobuf == 3.15.0",
         "pycryptodome == 3.6.6",
         "pycurl == 7.43.0.1",
         "pyscrypt == 1.6.2",
