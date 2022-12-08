@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/nebulasio/neb.py",
     install_requires=[
-        "certifi == 2018.4.16",
+        "certifi == 2022.12.7",
         "chardet == 3.0.4",
         "Crypto == 1.4.1",
         "cytoolz == 0.9.0.1",
